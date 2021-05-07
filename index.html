@@ -78,8 +78,8 @@
       <a href="#yourCart" class="d-flex align-items-center text-white" style="text-decoration: none;">
         <i class="fas fa-shopping-cart"></i><span class="mx-2 badge rounded-pill bg-light text-dark totalCartItems">0</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-info-circle text-white"></i>
+      <button class="navbar-toggler" onclick="toggleInfoButton()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-info-circle text-white" id="infoButton"></i>
       </button>
     </div>
   </div>
@@ -219,6 +219,11 @@
     18: ['Sabudana', 60, 'sabudana.jpg'],
     17: ['Copra', 220, 'copra.jpg'],
   };
+  
+  toggleInfoButton = () => {
+    var element = document.getElementById("infoButton");
+   element.classList.toggle("fa-times");
+  }
 
   window.onload = () => {
 
